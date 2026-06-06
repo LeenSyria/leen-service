@@ -4,51 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>لين.. عالمك الخاص بدمشق للخدمات الاجتماعية</title>
-    <meta name="description" content="لين من الشام، 22 سنة، نقدم خدمات تنسيق لقاءات اجتماعية، دردشات، وتواصل احترافي في كافة المحافظات السورية. خصوصية تامة وخدمة مميزة.">
-    <meta name="keywords" content="لين دمشق, تعارف سوريا, تنسيق لقاءات, خدمات تواصل, دمشق, حلب, ريف دمشق, جلسات دردشة">
+    <title>لين للتعارف وتنسيق اللقاءات في سوريا | منصة خدمات رقمية</title>
+    <meta name="description" content="منصة لين: أفضل خدمات التعارف وتنسيق اللقاءات في سوريا. نوفر دردشة فيديو خاصة، تواصل اجتماعي آمن، وخدمات تعارف جدي في دمشق وكافة المحافظات السورية. تجربة تواصل رقمية سريعة، موثوقة، وبخصوصية عالية. ابدأ محادثتك الآن ونسق لقاءاتك معنا بكل احترافية.">
+    <meta name="keywords" content="لين دمشق, تعارف سوريا, تنسيق لقاءات, خدمات تواصل, دمشق, حلب, ريف دمشق, جلسات دردشة, دردشة فيديو سوريا, لقاءات خاصة, تعارف جدي, تواصل اجتماعي سوري, خدمات تعارف سورية, تعارف شباب وصبايا, لقاءات في دمشق, تواصل سري, تعارف آمن">
     <meta name="robots" content="index, follow">
     
     <style>
-        :root { --gold: #d4af37; --dark: #121212; }
+        :root { --gold: #d4af37; --dark: #121212; --danger: #e63946; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--dark); color: #fff; margin: 0; padding: 0; }
         .container { max-width: 500px; margin: 20px auto; padding: 25px; text-align: center; background: linear-gradient(145deg, #1e1e1e, #000); border-radius: 40px; border: 2px solid var(--gold); }
+        .nav-bar { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+        .nav-btn { background: #333; color: var(--gold); padding: 8px 15px; border-radius: 15px; text-decoration: none; font-size: 0.9em; border: 1px solid var(--gold); }
         .profile-img { width: 220px; height: 220px; border-radius: 50%; border: 4px solid var(--gold); margin-bottom: 20px; object-fit: cover; box-shadow: 0 0 20px var(--gold); }
         h1 { color: var(--gold); font-size: 1.8em; }
         .bio { font-size: 1.2em; line-height: 1.7; color: #eee; margin-bottom: 20px; }
         .service-card { background: #222; padding: 15px; border-radius: 20px; margin: 15px 0; border: 1px solid var(--gold); text-align: right; }
-        .btn { display: block; width: 90%; margin: 15px auto; padding: 15px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2em; transition: 0.3s; }
+        .btn { display: block; width: 90%; margin: 10px auto; padding: 12px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: 0.3s; cursor: pointer; border: none; }
         .btn-wa { background: #25d366; color: white; }
         .btn-tg { background: #0088cc; color: white; }
+        .btn-danger { background: var(--danger); color: white; margin-top: 10px; }
+        .btn-info { background: #444; color: var(--gold); margin-top: 20px; border: 1px solid var(--gold); }
+        #modal { display: none; margin-top: 20px; padding: 15px; background: #333; border-radius: 20px; border: 1px dashed var(--gold); text-align: center; }
+        #about-modal { display: none; margin-top: 20px; padding: 15px; background: #333; border-radius: 20px; border: 1px dashed var(--gold); text-align: center; }
+        .area-btn { background: #444; color: #fff; margin: 5px; padding: 8px 10px; border-radius: 10px; display: inline-block; cursor: pointer; font-size: 0.8em; }
+        .contact-box { display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--gold); }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400" alt="لين" class="profile-img">
+    <div class="nav-bar">
+        <a href="#about" class="nav-btn">من نحن</a>
+        <a href="#services" class="nav-btn">ماذا نقدم</a>
+        <a href="#contact" class="nav-btn">التواصل</a>
+    </div>
+
+    <img src="https://i.ibb.co/yB8S119t/IMG-20260519-234848-582.jpg" alt="لين" class="profile-img">
     
-    <h1>أهلاً يا قلبي.. أنا لين 💋</h1>
+    <h1 id="about">أهلاً يا قلبي.. أنا لين 💋</h1>
     <p class="bio">
-        أنا لين من الشام عمري 22 بحكي اتصال فيديو دردشة مقابل شام كاش بكل سرية تجربة تواصل مريحة واحترافية 💋 بس بـ3 دولار ..
+        أنا لين من الشام عمري 22 بحكي اتصال فيديو دردشة مقابل شام كاش بكل سرية تجربة تواصل مريحة واحترافية 💋 بس 10 دولار لمدة ساعة ..
     </p>
 
-    <div class="service-card">
-        <h3>مكالمات فيديو.. بكل خصوصية </h3>
-        <p>بدك نتسلى ونفكّ القصة سوا؟ مكالمات فيديو مباشرة، حكي، راحة ما بيمرّق ببالك. كل شي بخصوصية تامة، والدفع سهل ومريح عبر "شام كاش".</p>
+    <div id="services" class="service-card">
+        <h3> من نحن ؟  </h3>
+        <p>نحن منصة متخصصة بتنسيق اللقاءات والدردشة في سوريا، نقدم خدماتنا بكل سرية واحترافية لضمان راحتكم.</p> </p>
     </div>
 
     <div class="service-card">
-        <h3>تنسيق.. بكل سوريا</h3>
+        <h3>ماذا نقدم ؟</h3>
         <p>تنسيق لقاءات؟ عندي أحلى خدمات تعارف بكل المحافظات: 
         (دمشق، ريف دمشق، حلب، حمص، حماة، اللاذقية، طرطوس، دير الزور، الرقة، إدلب، الحسكة، القنيطرة، السويداء، ودرعا).
-        بأي منطقة بدك، وبالعمر اللي بيعجبك.. بـ 3$ بس، وبزودك ببيانات التواصل وتتفق معها تلتقو.</p>
+        بأي منطقة بدك، وبالعمر اللي بيعجبك.. بـ 100 الف بس، وبزودك ببيانات التواصل وتتفق معها تلتقو.</p>
     </div>
 
-    <p style="color: var(--gold);">لا تخليني ناطرة.. تواصل معي وخلّينا نبلش:</p>
-    
-    <a href="https://wa.me/15737809120" class="btn btn-wa">واتساب | ناطرتك حبيبي</a>
-    <a href="https://t.me/lolo_45q" class="btn btn-tg">تليجرام | تواصل معي هلق</a>
+    <h3 id="contact" style="color: var(--gold);"> التواصل :</h3>
+    <a href="https://wa.me/15737809120" class="btn btn-wa">واتساب </a>
+    <a href="https://t.me/lolo_45q" class="btn btn-tg">تلجرام</a>
+
+    <!-- زر من نحن منفصل -->
+    <button class="btn btn-info" onclick="document.getElementById('about-modal').style.display='block'">💡 من نحن</button>
+    <div id="about-modal">
+        <div class="service-card">
+            <p>نحن منصة متخصصة بتنسيق اللقاءات والدردشة في سوريا،  نقدم خدماتنا بكل سرية واحترافية لضمان راحتكم.</p>
+        </div>
+    </div>
+
+    <p style="color: var(--gold); margin-top: 20px; font-size: 0.9em;">   اكبس هون مشان تعرف وين في بنات 👇     :</p>
+    <button class="btn btn-danger" onclick="document.getElementById('modal').style.display='block'">     المناطق الي فيها بنات !!</button>
+
+    <div id="modal">
+        <h3 style="color:var(--gold);">اختر المحافظة:</h3>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <span class="area-btn" onclick="showResult('دمشق', 'حرستا، دوما، المزة، التل، جرمانا، صحنايا، جديدة عرطوز')">دمشق</span>
+            <span class="area-btn" onclick="showResult('ادلب', 'سرمدا، الدانا، معرة النعمان')">ادلب</span>
+            <span class="area-btn" onclick="showResult('حلب', 'الجميلية، التل، ملعب حلب')">حلب</span>
+            <span class="area-btn" onclick="showResult('حمص', 'بابا عمرو، الخالدية، البياضة، العباسية، القصور')">حمص</span>
+            <span class="area-btn" onclick="showResult('حماة', 'حي البعث، غرناطة، الضاهرية')">حماة</span>
+            <span class="area-btn" onclick="showResult('اللاذقية', 'المشروع العاشر، بسنادا، الدعتور')">اللاذقية</span>
+            <span class="area-btn" onclick="showResult('طرطوس', 'الحمرات، المشروع السادس، الجنوبي')">طرطوس</span>
+            <span class="area-btn" onclick="showResult('درعا', 'ازرع، البانوراما، اليرموك، القنيطرة')">درعا</span>
+            <span class="area-btn" onclick="showResult('الرقة', 'الدرعية، رميلا، البانوراما')">الرقة</span>
+            <span class="area-btn" onclick="showResult('دير الزور', 'القصور، حي الجورة، الحميدية')">دير الزور</span>
+            <span class="area-btn" onclick="showResult('الحسكة', 'المعيشية، القامشلي، حي الناصرة')">الحسكة</span>
+        </div>
+        <div id="result" style="margin-top:15px; color:#fff; font-size:0.9em;"></div>
+        
+        <div id="contact-box" class="contact-box">
+            <p style="color:var(--gold);">لقيت طلبك؟ تواصل معي لانسقلك:</p>
+            <a href="https://wa.me/15737809120" style="display:block; color:#25d366; font-weight:bold; margin-bottom:5px;">واتساب</a>
+            <a href="https://t.me/lolo_45q" style="display:block; color:#0088cc; font-weight:bold;">تليجرام</a>
+        </div>
+    </div>
+
+    <div class="service-card" style="border-style: dashed; margin-top: 30px;">
+        <h3 style="color: var(--gold);">لين للخدمات الرقمية والتعارف في سوريا</h3>
+        <p style="font-size: 0.9em; line-height: 1.6;">
+            تعتبر منصة لين الوجهة الأولى لخدمات التعارف وتنسيق اللقاءات في سوريا. نوفر بيئة دردشة فيديو آمنة وسريعة تتيح للمستخدمين تنسيق لقاءات احترافية في دمشق، حلب، وكافة المحافظات السورية. نهتم بخصوصيتك وسرية بياناتك، مما يجعلنا الخيار الأفضل لـ التعارف الجدي وتنسيق المواعيد داخل المدن السورية.
+        </p>
+    </div>
 </div>
+
+<script>
+    function showResult(city, areas) {
+        document.getElementById('result').innerHTML = "✅ متوفر في " + city + "<br> المناطق: " + areas + "<br> <b style='color:var(--gold);'>الأعمار: 22 لـ 35 - التكلفة: كمسيون 100 ألف 💵</b>";
+        document.getElementById('contact-box').style.display = 'block';
+    }
+</script>
 
 </body>
 </html>
