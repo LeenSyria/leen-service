@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /leen-service/
+
+Sitemap: https://github.io
+
